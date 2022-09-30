@@ -80,12 +80,12 @@ html.light body {
 }
 
 html.dark .page__theme {
-	background: url(/images/sun.png) 0 0 / 100% no-repeat;
+	background: url(../images/sun.png) 0 0 / 100% no-repeat;
 	border-radius: 20%;
 }
 
 html.light .page__theme {
-	background: url(/images/moon.png) 0 0 / 100% no-repeat;
+	background: url(../images/moon.png) 0 0 / 100% no-repeat;
 	border-radius: 20%;
 }
 
