@@ -126,6 +126,14 @@ fetch("https://randomuser.me/api/?results=10")
       .getElementById("btn-reset")
       .addEventListener("click", returnNotSortedArr);
 
+    document
+      .getElementById("sex-all")
+      .addEventListener("click", returnNotSortedArr);
+
+    document.getElementById("sex-m").addEventListener("click", sort_sex_m);
+
+    document.getElementById("sex-w").addEventListener("click", sort_sex_w);
+
     function sort_0_99() {
       let cardsSortedAgeMinMax = cards;
       cardsSortedAgeMinMax.sort((a, b) => a.dob.age - b.dob.age);
@@ -262,6 +270,114 @@ fetch("https://randomuser.me/api/?results=10")
                       </div>
                       </div>
                   </div> `;
+      });
+
+      document.getElementById("result").innerHTML = result;
+    }
+
+    function sort_sex_m() {
+      let cardsSortedBySex = cards;
+      let cardsSortedMan = [];
+
+      for (let i = 0; i < cardsSortedBySex.length; i++) {
+        if (cardsSortedBySex[i].gender === "male") {
+          cardsSortedMan.push(cardsSortedBySex[i]);
+        }
+      }
+
+      let result = "";
+
+      cardsSortedMan.forEach(function (lists) {
+        result += `
+                    <div>
+                        <div class="friend-card">
+                        <div class="card-top">
+                        <div><img src="${lists.picture.large}"></div>
+                        <div class="bullet">
+                        <div id="name"> ${lists.name.first} ${lists.name.last}</div>
+                        <div>${lists.gender}</div>
+                        </div>
+                        </div>
+    
+                        <div class="card-bottom">
+    
+                        <div class="bullet">
+                        <p class="icons"> age-image: </p>
+                        <div id="age">${lists.dob.age}</div>
+                        </div>
+    
+                        <div class="bullet">
+                        <p class="icons"> location-image: </p>
+                        <div id="location">${lists.location.city}, ${lists.location.country}</div>
+                        </div>
+    
+                        <div class="bullet">
+                        <p class="icons"> phone-image: </p>
+                        <div id="phone">${lists.cell}</div>
+                        </div>
+    
+                        <div class="bullet">
+                        <p class="icons"> email-image: </p>
+                        <div>${lists.email}</div>
+                        </div>
+    
+                        </div>
+                        </div>
+                    </div> `;
+      });
+
+      document.getElementById("result").innerHTML = result;
+    }
+
+    function sort_sex_w() {
+      let cardsSortedBySex = cards;
+      let cardsSortedWoman = [];
+
+      for (let i = 0; i < cardsSortedBySex.length; i++) {
+        if (cardsSortedBySex[i].gender === "female") {
+          cardsSortedWoman.push(cardsSortedBySex[i]);
+        }
+      }
+
+      let result = "";
+
+      cardsSortedWoman.forEach(function (lists) {
+        result += `
+                    <div>
+                        <div class="friend-card">
+                        <div class="card-top">
+                        <div><img src="${lists.picture.large}"></div>
+                        <div class="bullet">
+                        <div id="name"> ${lists.name.first} ${lists.name.last}</div>
+                        <div>${lists.gender}</div>
+                        </div>
+                        </div>
+    
+                        <div class="card-bottom">
+    
+                        <div class="bullet">
+                        <p class="icons"> age-image: </p>
+                        <div id="age">${lists.dob.age}</div>
+                        </div>
+    
+                        <div class="bullet">
+                        <p class="icons"> location-image: </p>
+                        <div id="location">${lists.location.city}, ${lists.location.country}</div>
+                        </div>
+    
+                        <div class="bullet">
+                        <p class="icons"> phone-image: </p>
+                        <div id="phone">${lists.cell}</div>
+                        </div>
+    
+                        <div class="bullet">
+                        <p class="icons"> email-image: </p>
+                        <div>${lists.email}</div>
+                        </div>
+    
+                        </div>
+                        </div>
+                    </div> `;
       });
 
       document.getElementById("result").innerHTML = result;
