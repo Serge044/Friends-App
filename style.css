@@ -48,6 +48,22 @@ h1 {
 }
 /* ------------------ */
 
+/* loader */
+
+#loader {
+	display: none;
+	width: 500px;
+	height: 500px;
+	background-color: #667;
+	background-image: url(/images/loader.gif);
+	background-size: cover;
+	position: absolute;
+}
+
+#loader.show {
+	display: block;
+}
+
 body {
 	display: flex;
     flex-direction: row;
@@ -249,4 +265,18 @@ html.light .page__theme {
 
 .btn_sort:hover {
 	background-color: violet;
+}
+
+.name-input {
+	background-color: rgba(142, 181, 181, 0.777);
+	border: 2px solid gray;
+	outline: none;
+	resize: none;
+	padding: 3px 10px;
+	font-size: 15px;
+	border-radius: 5px;
+}
+
+.name-input:focus {
+	border-color: black;
 }

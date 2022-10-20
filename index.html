@@ -13,6 +13,13 @@
 	<div class="wrapper">
 		<div class="page">
 			<div class="page__container">
+
+				<div id="loader">
+					<div id="progress">
+						<div id="indeterminate"></div>
+					</div>
+				</div>
+
 				<div class="page__header">
 					<h1 class="page__title">Friends App</h1>
 					<div class="page__action">
@@ -25,27 +32,31 @@
 					<div class="menu-sort">
 
 							<div class="bullet-sort">
-							<p class="icons"> sort-by-age </p>
-							<button class="btn_sort" id="btn-sort-0-99">0 - 99</button>
-							<button class="btn_sort" id="btn-sort-99-0">99 - 0</button>
-							</div>
-
-
-							<div class="bullet-sort">
-							<p class="icons"> sort-by-name </p>
-							<button class="btn_sort">A - Z</button>
-							<button class="btn_sort">Z - A</button>
+								<p class="icons"> sort-by-age </p>
+								<button class="btn_sort" id="btn-sort-0-99">0 - 99</button>
+								<button class="btn_sort" id="btn-sort-99-0">99 - 0</button>
 							</div>
 
 							<div class="bullet-sort">
-							<p class="icons"> sort-by-sex </p>
-							<button class="btn_sort" id="sex-m">M</button>
-							<button class="btn_sort" id="sex-w">W</button>
-							<button class="btn_sort" id="sex-all">all</button>
+								<p class="icons"> sort-by-sex </p>
+								<button class="btn_sort" id="sex-m">M</button>
+								<button class="btn_sort" id="sex-w">W</button>
+								<button class="btn_sort" id="sex-all">all</button>
 							</div>
 
 							<div class="bullet-sort">
-							<button class="btn_sort-reset" id="btn-reset">Reset</button>
+								<p class="icons"> sort-by-name </p>
+								<button class="btn_sort">A - Z</button>
+								<button class="btn_sort">Z - A</button>
+								</div>
+
+							<div class="bullet-sort">
+								<p class="icons"> find-by-name </p>
+								<textarea id="nameInput" class="name-input" autofocus></textarea>
+							</div>
+
+							<div class="bullet-sort">
+								<button class="btn_sort-reset" id="btn-reset">Reset</button>
 							</div>
 
 					</div>

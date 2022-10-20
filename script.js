@@ -64,12 +64,32 @@ function windowLoad() {
   }
 }
 
+// loader
+
+const loaderDiv = document.getElementById("loader");
+
+function showLoader() {
+  loaderDiv.classList.add("show");
+}
+
+function hideLoader() {
+  loaderDiv.classList.remove("show");
+}
+
+// create request with ability change the number of how many cards load
+
+const howManyCardsLoad = 50;
+
 // get 10 cards
-fetch("https://randomuser.me/api/?results=10")
+showLoader();
+fetch(`https://randomuser.me/api/?results=${howManyCardsLoad}`)
   .then((res) => res.json())
   .then((data) => {
+    hideLoader();
     let cards = data.results;
     const originalArr = Object.assign([], cards);
+
+    // add catch
 
     let result = "";
 
