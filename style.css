@@ -55,7 +55,7 @@ h1 {
 	width: 500px;
 	height: 500px;
 	background-color: #667;
-	background-image: url(/images/loader.gif);
+	background-image: url(images/loader.gif);
 	background-size: cover;
 	position: absolute;
 }
@@ -221,7 +221,7 @@ html.light .page__theme {
 	margin-top: 18px;
 	margin-right: 20px;
 	width: 300px;
-	height: 400px;
+	height: 500px;
 	background-color: rgba(142, 181, 181, 0.777);
 	border-radius: 5px;
 	border: 2px solid rgb(16, 15, 15);
@@ -267,7 +267,7 @@ html.light .page__theme {
 	background-color: violet;
 }
 
-.name-input {
+.how-many-input {
 	background-color: rgba(142, 181, 181, 0.777);
 	border: 2px solid gray;
 	outline: none;
@@ -277,6 +277,6 @@ html.light .page__theme {
 	border-radius: 5px;
 }
 
-.name-input:focus {
+.how-many-input:focus {
 	border-color: black;
 }

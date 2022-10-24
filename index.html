@@ -31,6 +31,15 @@
 					<div id="result"></div>
 					<div class="menu-sort">
 
+							<div class="bullet-sort" id="loadCards">
+								<p class="icons">How many cards load?</p>
+								<button class="btn_sort" id="two">2</button>
+								<button class="btn_sort" id="five">5</button>
+								<button class="btn_sort" id="ten">10</button>
+								
+								<button class="btn_sort" id="enterManually">??</button>
+							</div>
+
 							<div id="howManyCardsLoad"></div>
 
 							<div class="bullet-sort">
@@ -48,14 +57,13 @@
 
 							<div class="bullet-sort">
 								<p class="icons"> sort-by-name </p>
-								<button class="btn_sort">A - Z</button>
-								<button class="btn_sort">Z - A</button>
+								<button class="btn_sort" id="az">A - Z</button>
+								<button class="btn_sort" id="za">Z - A</button>
 								</div>
 
 							<div class="bullet-sort">
 								<p class="icons"> find-by-name </p>
-								<textarea id="nameInput" class="name-input" autofocus></textarea>
-								<button id="get-textarea" class="btn_sort">Get value</button>
+								<input type="text" class="how-many-input" id="findByName">
 							</div>
 
 							<div class="bullet-sort">
