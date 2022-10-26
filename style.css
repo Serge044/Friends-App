@@ -245,7 +245,8 @@ html.light .page__theme {
 
 .btn_sort {
 	margin: 5px;
-	width: 30px;
+	width: 65px;
+	height: 40px;
 	border-radius: 50%;
 	cursor: pointer;
 	color: black;
@@ -279,4 +280,17 @@ html.light .page__theme {
 
 .how-many-input:focus {
 	border-color: black;
+}
+
+.greeting-window {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	width: 700px;
+	height: 300px;
+	background-color: antiquewhite;
+}
+
+.disp-none {
+	display: none;
 }

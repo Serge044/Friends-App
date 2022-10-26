@@ -84,21 +84,116 @@ const quoteInputElement = document.getElementById("nameInput");
 // work with "-" values
 // make this feature a popup element after on click
 
-// const howManyCardsLoad = 50;
-
 function howMany() {
   let howManyLoad = `
-  <div class="bullet-sort">
+  <div class="greeting-window" id="greetingWindow">
+  <h1>Hello!</h1>
+
+  <div class="bullet-sort" id="loadCards">
+  <p class="icons">How many cards load?</p>
+  <button class="btn_sort" id="two">2</button>
+  <button class="btn_sort" id="five">5</button>
+  <button class="btn_sort" id="ten">10</button>
+  <button class="btn_sort" id="enterManually">Enter manually</button>
+  </div>
+
+  <div class="bullet-sort" id="loadCards0-5000">
   <p class="icons"> How-many-cards-load?(0 - 5000) </p>
   <input id="howManyInput" class="how-many-input" type="number" min="1" max="5000" value="5" autofocus></input>
-  <button id="get-input" class="btn_sort">Get value</button>
+  <button id="get-input" class="btn_sort">Load</button>
+  </div>
   </div>
   `;
 
   document.getElementById("howManyCardsLoad").innerHTML = howManyLoad;
+
+  // !!!
+
+  // ----- work with empty string, symbols not like numbers. add respriction to push button if value is not alloved  -----
+
+  // !!!
+
+  document
+    .getElementById("howManyInput")
+    .addEventListener("keyup", checkNumberInput);
+  document
+    .getElementById("howManyInput")
+    .addEventListener("click", checkNumberInput);
+
+  function checkNumberInput() {
+    const valueFromInput = document.getElementById("howManyInput");
+    // console.log(valueFromInput.value);
+    if (valueFromInput.value < 1 || valueFromInput.value > 5000) {
+      console.log("Only numbers between 1 - 5000 allowed.");
+    }
+  }
 }
 
 howMany();
+
+function menuSort() {
+  let menuSort = `
+  <div class="menu-sort">
+
+  <div class="bullet-sort">
+    <p class="icons"> sort-by-age </p>
+    <button class="btn_sort" id="btn-sort-0-99">0 - 99</button>
+    <button class="btn_sort" id="btn-sort-99-0">99 - 0</button>
+  </div>
+
+  <div class="bullet-sort">
+    <p class="icons"> sort-by-sex </p>
+    <button class="btn_sort" id="sex-m">M</button>
+    <button class="btn_sort" id="sex-w">W</button>
+    <button class="btn_sort" id="sex-all">all</button>
+  </div>
+
+  <div class="bullet-sort">
+    <p class="icons"> sort-by-name </p>
+    <button class="btn_sort" id="az">A - Z</button>
+    <button class="btn_sort" id="za">Z - A</button>
+    </div>
+
+  <div class="bullet-sort">
+    <p class="icons"> find-by-name </p>
+    <input type="text" class="how-many-input" id="findByName">
+  </div>
+
+  <div class="bullet-sort">
+    <button class="btn_sort-reset" id="btn-reset">Reset</button>
+  </div>
+
+  </div>
+  `;
+  document.getElementById("menuSort").innerHTML = menuSort;
+}
+
+function addDisplayNoneToHowMany() {
+  const makeInvisible = document.getElementById("greetingWindow");
+  makeInvisible.classList.add("disp-none");
+}
+
+function addDisplayNone() {
+  const rem = document.getElementById("menuSort");
+  rem.classList.add("disp-none");
+}
+addDisplayNone();
+
+function addDisplayNoneToEnterManually() {
+  const rem = document.getElementById("loadCards0-5000");
+  rem.classList.add("disp-none");
+}
+addDisplayNoneToEnterManually();
+
+document.getElementById("enterManually").onclick = function () {
+  const rem = document.getElementById("loadCards0-5000");
+  rem.classList.remove("disp-none");
+};
+
+function removeDisplayNone() {
+  const rem = document.getElementById("menuSort");
+  rem.classList.remove("disp-none");
+}
 
 document.getElementById("get-input").onclick = function () {
   const input = document.getElementById("howManyInput");
@@ -110,13 +205,6 @@ document.getElementById("get-input").onclick = function () {
 // add restriction to enter only numbers
 // make other filters (perhaps country?)
 // add the default number to the input (for example, to load 10 cards)
-
-document.getElementById("get-input").onclick = function () {
-  const input = document.getElementById("howManyInput");
-  let returnFromInput = Math.floor(input.value);
-  console.log(returnFromInput);
-  mainProcess(returnFromInput);
-};
 
 // if btn "two" was clicked(make it one function with cycle)
 
@@ -222,6 +310,13 @@ function mainProcess(returnFromInput) {
       document
         .getElementById("findByName")
         .addEventListener("keyup", searchByName);
+
+      document.getElementById("howManyInput").addEventListener("click", smth);
+
+      function smth() {
+        const x = document.getElementById("howManyInput");
+        console.log(x.value);
+      }
 
       function sort_0_99() {
         let cardsSortedAgeMinMax = cards;
@@ -690,6 +785,8 @@ function mainProcess(returnFromInput) {
           document.getElementById("result").innerHTML = result;
         }
       }
+      addDisplayNoneToHowMany();
+      removeDisplayNone();
     })
     .catch((error) => {
       alert(
