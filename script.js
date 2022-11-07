@@ -3,6 +3,7 @@
 document.querySelector(".btn-change-color").onclick = () => {
   document.querySelector("section").classList.toggle("moon");
   document.querySelector("body").classList.toggle("change-mode");
+  document.querySelector(".greeting-window").classList.toggle("change-mode");
 };
 
 // loader
@@ -28,7 +29,7 @@ const quoteInputElement = document.getElementById("nameInput");
 function howMany() {
   let howManyLoad = `
   <div class="greeting-window" id="greetingWindow">
-  <h1>Hello!</h1>
+  <h1 class="text-hello">Hello!</h1>
 
   <div class="bullet-sort" id="loadCards">
   <p class="icons">How many cards load?</p>
