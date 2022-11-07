@@ -1,68 +1,9 @@
-window.addEventListener("load", windowLoad);
+// change color
 
-function windowLoad() {
-  //HTML
-  const htmlBlock = document.documentElement;
-
-  // get saved theme
-  const saveUserTheme = localStorage.getItem("user-theme");
-
-  // work with system configurations
-  let userTheme;
-  if (window.matchMedia) {
-    userTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  }
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      !saveUserTheme ? changeTheme() : null;
-    });
-
-  // change theme by click
-  const themeButton = document.querySelector(".page__theme");
-  const resetButton = document.querySelector(".page__reset");
-  if (themeButton) {
-    themeButton.addEventListener("click", function (e) {
-      resetButton.classList.add("active");
-      changeTheme(true);
-    });
-  }
-  if (resetButton) {
-    resetButton.addEventListener("click", function (e) {
-      resetButton.classList.remove("active");
-      localStorage.setItem("user-theme", "");
-    });
-  }
-
-  // function add theme class
-  function setThemeClass() {
-    if (saveUserTheme) {
-      htmlBlock.classList.add(saveUserTheme);
-      resetButton.classList.add("active");
-    } else {
-      htmlBlock.classList.add(userTheme);
-    }
-  }
-  // add theme class
-  setThemeClass();
-
-  // function change theme
-  function changeTheme(saveTheme = false) {
-    let currentTheme = htmlBlock.classList.contains("light") ? "light" : "dark";
-    let newTheme;
-
-    if (currentTheme === "light") {
-      newTheme = "dark";
-    } else if (currentTheme === "dark") {
-      newTheme = "light";
-    }
-    htmlBlock.classList.remove(currentTheme);
-    htmlBlock.classList.add(newTheme);
-    saveTheme ? localStorage.setItem("user-theme", newTheme) : null;
-  }
-}
+document.querySelector(".btn-change-color").onclick = () => {
+  document.querySelector("section").classList.toggle("moon");
+  document.querySelector("body").classList.toggle("change-mode");
+};
 
 // loader
 
@@ -252,7 +193,7 @@ function mainProcess(returnFromInput) {
                     <div><img src="${lists.picture.large}"></div>
                     <div class="bullet">
                     <div id="name"> ${lists.name.first} ${lists.name.last}</div>
-                    <div>${lists.gender}</div>
+                    <div id="gender">${lists.gender}</div>
                     </div>
                     </div>
 
@@ -727,6 +668,12 @@ function mainProcess(returnFromInput) {
 
       function searchByName() {
         const x = document.getElementById("findByName");
+
+        // think about trim()
+        // think about error after search by name in big amount of friends(>1000)
+
+        // x.value = x.value.trim();
+
         let lowerCase = x.value.toLowerCase();
         let getArr = cards;
         let sortedArr = [];
@@ -736,9 +683,9 @@ function mainProcess(returnFromInput) {
             " " +
             getArr[i].name.last.toLowerCase();
           if (lastPlusFirst.includes(lowerCase)) {
-            console.log(lastPlusFirst);
+            // console.log(lastPlusFirst);
             sortedArr.push(getArr[i]);
-            console.log(getArr[i].name.first.toLowerCase());
+            // console.log(getArr[i].name.first.toLowerCase());
           }
 
           let result = "";
@@ -789,9 +736,17 @@ function mainProcess(returnFromInput) {
       removeDisplayNone();
     })
     .catch((error) => {
-      alert(
-        "Oops, some Error occurred. Please reload the page or try again later."
+      swal({
+        icon: "error",
+        title: "Oops...",
+        text: "Some Error occurred. Please reload the page or try again later.",
+        footer: '<a href="">Why do I have this issue?</a>',
+      });
+
+      // maked text in console Red, changed font family
+      console.log(
+        `%c${error}`,
+        "color:red; font-family: sant-serif; font-size: 20px"
       );
-      console.log(error);
     });
 }

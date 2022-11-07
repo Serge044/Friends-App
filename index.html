@@ -8,24 +8,32 @@
 	content="width=device-width, initial-scale=1.0"/>
 	<link rel="shortcut icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
+
+
 	<div class="wrapper">
 		<div class="page">
 			<div class="page__container">
 
 				<div id="loader">
-					<div id="progress">
-						<div id="indeterminate"></div>
+					<!-- <div id="progress">
+						<div id="indeterminate"></div> -->
 					</div>
 				</div>
 
 				<div class="page__header">
-					<h1 class="page__title">Friends App</h1>
-					<div class="page__action">
-						<button id="btn" type="button" class="page__theme"></button>
-						<button id="btn2" type="button" class="page__reset"></button>
-					</div>			
+					<h1 class="page__title">Friends App</h1>	
+
+					<section>
+						<button class="btn-change-color">
+							<span></span>
+							<i class="bx bx-sun"></i>
+							<i class="bx bx-moon"></i>
+						</button>
+					</section>
+
 				</div>
 				<div id="howManyCardsLoad"></div>
 				<div class="page__content">
@@ -43,7 +51,6 @@
 							</div> -->
 
 							<!-- <div id="howManyCardsLoad"></div> -->
-
 							<div class="bullet-sort">
 								<p class="icons"> sort-by-age </p>
 								<button class="btn_sort" id="btn-sort-0-99">0 - 99</button>
@@ -77,7 +84,7 @@
 			</div>
 		</div>
 	</div>
-    
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="module" src="script.js"></script>
  </body>
 </html>
