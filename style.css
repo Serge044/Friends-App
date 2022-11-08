@@ -20,7 +20,11 @@ a {
 	background-color: #667;
 	background-image: url(images/loader.gif);
 	background-size: cover;
-	position: absolute;
+	z-index: 1000;
+}
+
+.half-opacity {
+	opacity: 0.5;
 }
 
 #loader.show {
@@ -136,8 +140,6 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
 }
 
-
-/* here */
 #howManyCardsLoad {
 	margin-top: 200px;
 	justify-content: center;
@@ -147,8 +149,8 @@ body {
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
 	border-radius: 10px;
-
 }
+
 .page__content {
 	display: flex;
 	margin-top: 60px;
@@ -312,6 +314,25 @@ body {
 	background-color: rgb(58, 58, 58);
 }
 
+/* ----------------------------- */
+
+/* button sort burger */
+
+
+.sort-burger {
+	display: none;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border-radius: 25%;
+	margin: 20px;
+}
+
+.disp-none {
+	display: none;
+}
+
+
 /*------------------------------------------
   Responsive Grid Media Queries - 1280, 1024, 768, 480
    1280-1024   - desktop (default grid)
@@ -346,5 +367,8 @@ body {
 
 @media all and (min-width: 480px) and (max-width: 768px) { }
 
-@media all and (max-width: 480px) { }
-
+@media all and (max-width: 715px) {
+	.sort-burger {
+		display: inline;
+	}
+}

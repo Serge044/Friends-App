@@ -9,14 +9,23 @@ document.querySelector(".btn-change-color").onclick = () => {
 // loader
 
 const loaderDiv = document.getElementById("loader");
+const selectWrapper = document.querySelector(".page");
 
 function showLoader() {
+  selectWrapper.classList.add("half-opacity");
   loaderDiv.classList.add("show");
 }
 
 function hideLoader() {
   loaderDiv.classList.remove("show");
+  selectWrapper.classList.remove("half-opacity");
 }
+
+// button sort burger
+
+document.querySelector(".sort-burger").onclick = () => {
+  document.querySelector(".menu-sort").classList.toggle("disp-none");
+};
 
 // sort by name
 
