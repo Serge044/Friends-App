@@ -23,9 +23,33 @@ function hideLoader() {
 
 // button sort burger
 
-document.querySelector(".sort-burger").onclick = () => {
-  document.querySelector(".menu-sort").classList.toggle("disp-none");
-};
+function CreateBurgerBtn() {
+  let burgerBtn = `
+  <button class="sort-burger">
+  sort-menu
+  </button>
+  `;
+  document.getElementById("divForSortBtn").innerHTML = burgerBtn;
+}
+// CreateBurgerBtn();
+
+function toggleForBurger() {
+  document.querySelector(".sort-burger").onclick = () => {
+    document.querySelector(".menu-sort").classList.toggle("disp-none");
+  };
+}
+
+function checkScreenWigth() {
+  window.addEventListener("resize", function () {
+    const wid = document.documentElement.clientWidth;
+    console.log(wid);
+    if (wid <= 715) {
+      document.querySelector(".menu-sort").classList.add("disp-none");
+    } else {
+      document.querySelector(".menu-sort").classList.remove("disp-none");
+    }
+  });
+}
 
 // sort by name
 
@@ -189,6 +213,10 @@ function mainProcess(returnFromInput) {
     .then((res) => res.json())
     .then((data) => {
       hideLoader();
+      // ------------------------------------------------------------------!!!!!!!!!!!!!!!!!!
+      CreateBurgerBtn();
+      toggleForBurger();
+      checkScreenWigth();
       let cards = data.results;
       const originalArr = Object.assign([], cards);
       // console.log(originalArr);
