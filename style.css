@@ -180,6 +180,16 @@ body {
 	align-items: center;
 }
 
+.bullet-sort-greeting {
+	display: flex;
+	height: 50px;
+	padding: 10px;
+    background-color: rgba(153, 83, 223, 0.817);
+    margin: 10px;
+    border-radius: 5px;
+	align-items: center;
+}
+
 .btn_sort {
 	margin: 5px;
 	width: 65px;
@@ -339,11 +349,33 @@ body {
 	height: 50px;
 	cursor: pointer;
 	border-radius: 25%;
-	margin: 20px;
+	margin: 5px;
+}
+
+.sort-burger-close {
+	display: none;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border-radius: 25%;
+	margin: 5px;
+}
+
+.sort-burger3 {
+	display: none;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border-radius: 25%;
+	margin: 5px;
 }
 
 .disp-none {
 	display: none;
+}
+
+.disp-inline {
+	display: inline;
 }
 
 
@@ -379,13 +411,102 @@ body {
 	}
 }
 
-@media all and (min-width: 480px) and (max-width: 768px) { }
+/* @media all and (min-width: 716px){
+	.menu-sort {
+		display: flex;
+		transition: 0.5s;
+	}
+} */
 
 @media all and (max-width: 715px) {
-	.sort-burger {
+	/* .sort-burger {
 		display: inline;
 	}
-	/* .menu-sort {
-		display: none;
+
+	.sort-burger-close {
+		display: inline;
 	} */
+
+
+	/* .menu-sort {
+		position: fixed;
+		top: 35px;
+		left: 20px;
+		width: 100vw;
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+		background-color: #667;
+		opacity: 0.97;
+	} */
+
+	.menu-sort {
+		position: fixed;
+		flex-direction: column;
+		width: 100px;
+		height: 700px;
+		top: 35px;
+		/* right: 0px; */
+		margin-top: 19px;
+		margin-right: 5px;
+		/* width: 100vw;
+		height: 100vh; */
+		align-items: center;
+		justify-content: center;
+		background-color: #667;
+		opacity: 0.97;
+	}
+
+	.bullet-sort {
+		flex-direction: column;
+		/* align-items:flex-end; */
+		height: 50px;
+		padding-top: 0px;
+		padding-bottom: 100px;
+		/* padding-top: 100px; */
+		max-width: 100px;
+
+	}
+
+	#sort-sex {
+		height: 200px;
+	}
+
+	#findByNameBullet {
+		width: 100%;
+	}
+
+	#findByName {
+		width: 96px;
+	}
+
+	#resetBullet {
+		width: 100%;
+	}
+
+
+	@media all and (max-width: 500px) {
+		.friend-card {
+			width: 250px;
+		}
+	}
+
+
+/* 
+	height: 50px;
+	padding: 10px;
+    background-color: rgba(153, 83, 223, 0.817);
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+	align-items: center; */
+	/* .menu-sort {
+		visibility: hidden;
+	} */
+
 }
+
+/* .sort-burger:active ~ .menu-sort{
+	display: inline;
+	visibility: visible;
+} */

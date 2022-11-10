@@ -35,11 +35,12 @@
 						</button>
 					</section>
 					
-					<div class="div-for-sort-btn" id="divForSortBtn">
-					<!-- <button class="sort-burger">
-						sort-menu
-					</button> -->
+					<!-- <div class="div-for-sort-btn" id="divForSortBtn">
+
 					</div>
+					<div class="div-for-sort-btn2" id="divForSortBtn2">
+
+						</div> -->
 
 				</div>
 				<div id="howManyCardsLoad"></div>
@@ -54,11 +55,19 @@
 								<button class="btn_sort" id="btn-sort-99-0">99 - 0</button>
 							</div>
 
-							<div class="bullet-sort">
-								<p class="icons"> sort-by-sex </p>
+							<div class="bullet-sort" id="sort-sex">
+								<!-- <p class="icons"> sort-by-sex </p>
 								<button class="btn_sort" id="sex-m">M</button>
 								<button class="btn_sort" id="sex-w">W</button>
-								<button class="btn_sort" id="sex-all">all</button>
+								<button class="btn_sort" id="sex-all">all</button> -->
+
+								<p class="icons"> sort-by-sex </p>
+								<input type="radio" id="M" name="status"> 
+								<label for="M">M</label>
+								<input type="radio" id="W" name="status"> 
+								<label for="W">W</label>
+								<input type="radio" id="All" name="status" checked>
+								<label for="All">All</label> 
 							</div>
 
 							<div class="bullet-sort">
@@ -67,12 +76,12 @@
 								<button class="btn_sort" id="za">Z - A</button>
 								</div>
 
-							<div class="bullet-sort">
+							<div class="bullet-sort" id="findByNameBullet">
 								<p class="icons"> find-by-name </p>
 								<input type="text" class="how-many-input" id="findByName">
 							</div>
 
-							<div class="bullet-sort">
+							<div class="bullet-sort" id="resetBullet">
 								<button class="btn_sort-reset" id="btn-reset">Reset</button>
 							</div>
 
