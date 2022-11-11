@@ -49,7 +49,11 @@ body {
 	display: flex;
     flex-direction: row;
 	transition: all 0.3s ease 0s;
-	background-color: rgb(236, 236, 236);;
+	background-color: rgb(236, 236, 236);
+
+
+	/* background-repeat: no-repeat; */
+	flex-wrap: wrap;
 	color: black;
 	position: relative;
 }
@@ -338,6 +342,7 @@ body {
 	background-color: rgb(58, 58, 58);
 }
 
+
 /* ----------------------------- */
 
 /* button sort burger */
@@ -376,6 +381,70 @@ body {
 
 .disp-inline {
 	display: inline;
+}
+
+/* radio buttons */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+:root{
+  --main:#222222;
+  --accent:#0DFF92;
+} */
+/* body{
+  display: flex;
+  justify-content: center;
+  column-gap: 200px;
+  padding: 40px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  background: var(--main);
+  color: #fff;
+} */
+
+/*--------RADIO-----------*/
+
+.radio__item {
+  cursor: pointer; 
+}
+.radio__item:hover{
+  opacity: .8;
+}
+.radio__real {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+.radio__fake {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  margin-right: 2px;
+  margin-left: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.radio__real:checked + .radio__fake::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgb(10, 157, 10);
+}
+
+.radio__real:checked ~ .radio__text{
+  color: rgb(10, 157, 10);
 }
 
 
@@ -419,26 +488,6 @@ body {
 } */
 
 @media all and (max-width: 715px) {
-	/* .sort-burger {
-		display: inline;
-	}
-
-	.sort-burger-close {
-		display: inline;
-	} */
-
-
-	/* .menu-sort {
-		position: fixed;
-		top: 35px;
-		left: 20px;
-		width: 100vw;
-		height: 100vh;
-		align-items: center;
-		justify-content: center;
-		background-color: #667;
-		opacity: 0.97;
-	} */
 
 	.menu-sort {
 		position: fixed;
@@ -447,7 +496,7 @@ body {
 		height: 700px;
 		top: 35px;
 		/* right: 0px; */
-		margin-top: 19px;
+		margin-top: 45px;
 		margin-right: 5px;
 		/* width: 100vw;
 		height: 100vh; */
@@ -469,11 +518,13 @@ body {
 	}
 
 	#sort-sex {
-		height: 200px;
+		height: 180px;
+		width: 100%;
 	}
 
 	#findByNameBullet {
 		width: 100%;
+		/* height: 50px; */
 	}
 
 	#findByName {
@@ -484,29 +535,22 @@ body {
 		width: 100%;
 	}
 
+	.radio__list {
+
+	}
+
+	.section__btn {
+		/* margin-left: 5px */
+	}
+
+	.radio__item {
+		padding-left: 52px;
+	}
+
 
 	@media all and (max-width: 500px) {
 		.friend-card {
 			width: 250px;
 		}
 	}
-
-
-/* 
-	height: 50px;
-	padding: 10px;
-    background-color: rgba(153, 83, 223, 0.817);
-    margin: 10px;
-    border-radius: 5px;
-    display: flex;
-	align-items: center; */
-	/* .menu-sort {
-		visibility: hidden;
-	} */
-
 }
-
-/* .sort-burger:active ~ .menu-sort{
-	display: inline;
-	visibility: visible;
-} */

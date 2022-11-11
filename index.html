@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
-<body>
+<body id="body">
 	
 	<div id="loader">
 		<div class="loader-animation"></div>
@@ -61,13 +61,35 @@
 								<button class="btn_sort" id="sex-w">W</button>
 								<button class="btn_sort" id="sex-all">all</button> -->
 
-								<p class="icons"> sort-by-sex </p>
+								<!-- <p class="icons"> sort-by-sex </p>
 								<input type="radio" id="M" name="status"> 
 								<label for="M">M</label>
 								<input type="radio" id="W" name="status"> 
 								<label for="W">W</label>
 								<input type="radio" id="All" name="status" checked>
-								<label for="All">All</label> 
+								<label for="All">All</label>  -->
+
+
+								<p class="icons"> sort-by-sex </p>
+								<div class="radio">
+									<div class="radio__list">
+									  <label class="radio__item">
+										<input type="radio" class="radio__real" name="radio" id="M">
+										<span class="radio__fake"></span>
+										<span class="radio__text">M</span>
+									  </label>
+									  <label class="radio__item">
+										<input type="radio" class="radio__real" name="radio" id="W">
+										<span class="radio__fake"></span>
+										<span class="radio__text">W</span>
+									  </label>
+									  <label class="radio__item">
+										<input type="radio" class="radio__real" name="radio" id="All" checked>
+										<span class="radio__fake"></span>
+										<span class="radio__text">All</span>
+									  </label>
+									</div>
+								  </div>
 							</div>
 
 							<div class="bullet-sort">
