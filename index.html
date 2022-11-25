@@ -49,59 +49,67 @@
 
 					<div class="menu-sort" id="menuSort">
 
+
+						<div class="bullet-sort" id="findByNameBullet">
+							<p class="icons"> Find by name </p>
+							<input type="text" class="how-many-input" id="findByName">
+						</div>
+
+						<div class="bullet-sort" id="sort-sex">
+							<!-- <p class="icons"> sort-by-sex </p>
+							<button class="btn_sort" id="sex-m">M</button>
+							<button class="btn_sort" id="sex-w">W</button>
+							<button class="btn_sort" id="sex-all">all</button> -->
+
+							<!-- <p class="icons"> sort-by-sex </p>
+							<input type="radio" id="M" name="status"> 
+							<label for="M">M</label>
+							<input type="radio" id="W" name="status"> 
+							<label for="W">W</label>
+							<input type="radio" id="All" name="status" checked>
+							<label for="All">All</label>  -->
+
+
+							<p class="icons"> Sort by sex</p>
+							<div class="radio">
+								<div class="radio__list">
+								  <label class="radio__item">
+									<input type="radio" class="radio__real" name="radio" id="M">
+									<span class="radio__fake"></span>
+									<span class="radio__text">M</span>
+								  </label>
+								  <label class="radio__item">
+									<input type="radio" class="radio__real" name="radio" id="W">
+									<span class="radio__fake"></span>
+									<span class="radio__text">W</span>
+								  </label>
+								  <label class="radio__item">
+									<input type="radio" class="radio__real" name="radio" id="All" checked>
+									<span class="radio__fake"></span>
+									<span class="radio__text">All</span>
+								  </label>
+								</div>
+							  </div>
+						</div>
+
 							<div class="bullet-sort">
-								<p class="icons">sort-by-age</p>
+								<p class="icons">Sort by age</p>
 								<button class="btn_sort bx bx-sort-up" id="btn-sort-0-99"></button>
 								<button class="btn_sort bx bx-sort-down" id="btn-sort-99-0"></button>
 							</div>
 
-							<div class="bullet-sort" id="sort-sex">
-								<!-- <p class="icons"> sort-by-sex </p>
-								<button class="btn_sort" id="sex-m">M</button>
-								<button class="btn_sort" id="sex-w">W</button>
-								<button class="btn_sort" id="sex-all">all</button> -->
 
-								<!-- <p class="icons"> sort-by-sex </p>
-								<input type="radio" id="M" name="status"> 
-								<label for="M">M</label>
-								<input type="radio" id="W" name="status"> 
-								<label for="W">W</label>
-								<input type="radio" id="All" name="status" checked>
-								<label for="All">All</label>  -->
-
-
-								<p class="icons" > sort-by-sex </p>
-								<div class="radio">
-									<div class="radio__list">
-									  <label class="radio__item">
-										<input type="radio" class="radio__real" name="radio" id="M">
-										<span class="radio__fake"></span>
-										<span class="radio__text">M</span>
-									  </label>
-									  <label class="radio__item">
-										<input type="radio" class="radio__real" name="radio" id="W">
-										<span class="radio__fake"></span>
-										<span class="radio__text">W</span>
-									  </label>
-									  <label class="radio__item">
-										<input type="radio" class="radio__real" name="radio" id="All" checked>
-										<span class="radio__fake"></span>
-										<span class="radio__text">All</span>
-									  </label>
-									</div>
-								  </div>
-							</div>
 
 							<div class="bullet-sort">
-								<p class="icons"> sort-by-name </p>
+								<p class="icons"> Sort by name </p>
 								<button class="btn_sort bx bx-sort-a-z" id="az"></button>
 								<button class="btn_sort bx bx-sort-z-a" id="za"></button>
 								</div>
-
+<!-- 
 							<div class="bullet-sort" id="findByNameBullet">
 								<p class="icons"> find-by-name </p>
 								<input type="text" class="how-many-input" id="findByName">
-							</div>
+							</div> -->
 
 							<div class="bullet-sort" id="resetBullet">
 								<button class="btn_sort-reset" id="btn-reset">Reset</button>

@@ -88,7 +88,7 @@ body {
 
 .friend-card {
     margin: 20px;
-    height: 500px;
+    height: 530px;
     width: 350px;
     border: 2px solid rgb(16, 15, 15);
     border-radius: 5px;
@@ -326,7 +326,7 @@ body {
 	color: rgb(236, 236, 236);
 }
 
-.change-mode img {
+.change-mode #friend-icon {
 	border: 5px solid rgb(58, 58, 58);
 }
 
@@ -560,3 +560,19 @@ body {
 }
 
 /* test2 */
+
+.bullet-icon {
+	width: 30px;
+	margin-right: 10px;
+	/* min-width: 30px; */
+}
+
+#location, #age, #phone, #email {
+	display: flex;
+	align-items: center;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+}

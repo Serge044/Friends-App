@@ -252,7 +252,7 @@ function mainProcess(returnFromInput) {
                 <div>
                     <div class="friend-card">
                     <div class="card-top">
-                    <div><img src="${lists.picture.large}"></div>
+                    <div><img src="${lists.picture.large}" id="friend-icon"></div>
                     <div class="bullet">
                     <div id="name"> ${lists.name.first} ${lists.name.last}</div>
                     <div id="gender">${lists.gender}</div>
@@ -262,23 +262,27 @@ function mainProcess(returnFromInput) {
                     <div class="card-bottom">
 
                     <div class="bullet">
-                    <p class="icons"> age-image: </p>
+                    <img src="/images/age-icon2.png" class="bullet-icon">
+                    <p class="icons"> : </p>
                     <div id="age">${lists.dob.age}</div>
                     </div>
 
                     <div class="bullet">
-                    <p class="icons"> location-image: </p>
+                    <img src="/images/location-icon.png" class="bullet-icon">
+                    <p class="icons"> : </p>
                     <div id="location">${lists.location.city}, ${lists.location.country}</div>
                     </div>
 
                     <div class="bullet">
-                    <p class="icons"> phone-image: </p>
+                    <img src="/images/phone-icon.png" class="bullet-icon">
+                    <p class="icons"> : </p>
                     <div id="phone">${lists.cell}</div>
                     </div>
 
                     <div class="bullet">
-                    <p class="icons"> email-image: </p>
-                    <div>${lists.email}</div>
+                    <img src="/images/email-icon.png" class="bullet-icon">
+                    <p class="icons"> : </p>
+                    <div id="email">${lists.email}</div>
                     </div>
 
                     </div>
