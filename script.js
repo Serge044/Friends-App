@@ -262,25 +262,25 @@ function mainProcess(returnFromInput) {
                     <div class="card-bottom">
 
                     <div class="bullet">
-                    <img src="/images/age-icon2.png" class="bullet-icon">
+                    <img src="images/age-icon2.png" class="bullet-icon">
                     <p class="icons"> : </p>
                     <div id="age">${lists.dob.age}</div>
                     </div>
 
                     <div class="bullet">
-                    <img src="/images/location-icon.png" class="bullet-icon">
+                    <img src="images/location-icon.png" class="bullet-icon">
                     <p class="icons"> : </p>
                     <div id="location">${lists.location.city}, ${lists.location.country}</div>
                     </div>
 
                     <div class="bullet">
-                    <img src="/images/phone-icon.png" class="bullet-icon">
+                    <img src="images/phone-icon.png" class="bullet-icon">
                     <p class="icons"> : </p>
                     <div id="phone">${lists.cell}</div>
                     </div>
 
                     <div class="bullet">
-                    <img src="/images/email-icon.png" class="bullet-icon">
+                    <img src="images/email-icon.png" class="bullet-icon">
                     <p class="icons"> : </p>
                     <div id="email">${lists.email}</div>
                     </div>
